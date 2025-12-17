@@ -4,7 +4,7 @@ const HeroSection = () => {
   const [chars, setChars] = useState([]);
 
   useEffect(() => {
-    const text = 'Dosee Wellness';
+    const text = 'Busy days, gently reset.';
     setTimeout(() => {
       setChars(text.split(''));
     }, 500);
@@ -14,6 +14,7 @@ const HeroSection = () => {
     <section className="hero">
       <div className="hero-bg" />
       <div className="hero-content">
+        <p className="hero-label">DOSEE WELLNESS</p>
         <h1>
           {chars.map((char, i) => (
             <span
@@ -25,7 +26,26 @@ const HeroSection = () => {
             </span>
           ))}
         </h1>
-        <p className="subtitle">小さな積み重ねが、あなたの健康を作る。</p>
+        <p className="subtitle">
+          DoSee Wellness は、忙しい毎日の中で「こころ・からだ・肌」を<br />
+          やさしく整える一杯を届けるウェルネスブランドです。
+        </p>
+        
+        {/* 3つの軸 */}
+        <div className="hero-badges">
+          <span className="badge badge-mind">
+            <span className="badge-dot"></span>
+            Mind — 静かな集中と落ち着き
+          </span>
+          <span className="badge badge-body">
+            <span className="badge-dot"></span>
+            Body — 日々のコンディションケア
+          </span>
+          <span className="badge badge-skin">
+            <span className="badge-dot"></span>
+            Skin — 内側から満ちる透明感
+          </span>
+        </div>
       </div>
       <div className="scroll-indicator">SCROLL</div>
     </section>

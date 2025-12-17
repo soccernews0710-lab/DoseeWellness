@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 const Navigation = ({ isScrolled }) => {
   const menuItems = [
-    { label: 'ストーリー', href: '#story' },
-    { label: 'ミッション', href: '#mission' },
-    { label: 'バリュー', href: '#values' },
-    { label: 'お問い合わせ', href: '#contact' }
+    { label: 'Philosophy', href: '#philosophy' },
+    { label: 'Products', href: '#products' },
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' }
   ];
 
   const handleClick = (e, href) => {
@@ -16,7 +18,7 @@ const Navigation = ({ isScrolled }) => {
 
   return (
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="logo">Dosee Wellness</div>
+      <Link to="/" className="logo">Dosee Wellness</Link>
       <ul>
         {menuItems.map(item => (
           <li key={item.href}>
